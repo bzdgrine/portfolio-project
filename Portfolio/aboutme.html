@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3313/3313480.png">
+    <link rel="stylesheet" href="aboutme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="sidebar">
+        <div class="logo">C</div>
+        <ul class="nav-links">
+            <li><a href="index.html" title="Home"><i class="fas fa-home"></i></a></li>
+            <li><a href="aboutme.html" title="About Me"><i class="fas fa-user"></i></a></li>
+            <li><a href="prelims.html" title="Prelims"><i class="fas fa-book"></i></a></li>
+            <li><a href="midterms.html" title="Midterms"><i class="fas fa-book-open"></i></a></li>
+            <li><a href="finals.html" title="Finals"><i class="fas fa-graduation-cap"></i></a></li>
+        </ul>
+        <div class="social-links">
+            <a href="https://www.facebook.com/bszgdrine" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/bzsgdrine" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:estrada.catherine@ue.edu.ph" title="Email" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+    </nav>
+
+    <main class="content about-content">
+        <div class="about-section">
+            <div class="intro">
+                <h2>Hello, I'm <span class="highlight">Catherine</span></h2>
+                <p class="subtitle">Student at University of the East</p>
+                <p class="description">
+                    I am passionate about learning and exploring new things.
+                    Currently focusing on my studies in Bachelor of Science in Computer Science.
+                </p>
+
+            <section class="hobbies-section">
+                <h2>My Hobbies</h2>
+                <div class="hobby-grid">
+                    <div class="hobby-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Reading</h3>
+                        <p>Exploring new worlds through books and literature.</p>
+                    </div>
+                    <div class="hobby-card">
+                        <i class="fas fa-tv"></i>
+                        <h3>Watching</h3>
+                        <p>Enjoying movies, series, and documentaries.</p>
+                    </div>
+                    <div class="hobby-card">
+                        <i class="fas fa-music"></i>
+                        <h3>Music</h3>
+                        <p>Listening to various genres and melodies.</p>
+                    </div>
+                    <div class="hobby-card">
+                        <i class="fas fa-walking"></i>
+                        <h3>Walking Alone</h3>
+                        <p>Finding peace and clarity through solitary walks.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+                sidebar.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
