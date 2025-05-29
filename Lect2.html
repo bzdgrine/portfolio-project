@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Structures - Lecture 2</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3313/3313480.png">
+    <link rel="stylesheet" href="Lect2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="sidebar">
+        <div class="logo">C</div>
+        <ul class="nav-links">
+            <li><a href="index.html" title="Home"><i class="fas fa-home"></i></a></li>
+            <li><a href="aboutme.html" title="About Me"><i class="fas fa-user"></i></a></li>
+            <li><a href="Lecture.html" title="Lectures"><i class="fas fa-chalkboard-teacher"></i></a></li>
+            <li><a href="prelims.html" title="Prelims"><i class="fas fa-book"></i></a></li>
+            <li><a href="midterms.html" title="Midterms"><i class="fas fa-book-open"></i></a></li>
+            <li><a href="finals.html" title="Finals"><i class="fas fa-graduation-cap"></i></a></li>
+        </ul>
+        <div class="social-links">
+            <a href="https://www.facebook.com/bszgdrine" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/bzsgdrine" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:estrada.catherine@ue.edu.ph" title="Email" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <div class="lecture-content">
+            <div class="intro">
+                <h2>HTML <span class="highlight">Structures</span></h2>
+                <p class="subtitle">Examples and Applications</p>
+            </div>
+
+            <section class="lecture-section">
+                <div class="lecture-container">
+                    <h3>1. Attributes and Values</h3>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Code:</p>
+                            <pre><code>&lt;p align="center"&gt;This is a centered paragraph&lt;/p&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <p>Output:</p>
+                            <p align="center">This is a centered paragraph</p>
+                        </div>
+                    </div>
+
+                    <h3>2. Text Formatting</h3>
+                    
+                    <h4>Italicized Text</h4>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Code:</p>
+                            <pre><code>&lt;i&gt;Italic text&lt;/i&gt;
+&lt;em&gt;Emphasized text&lt;/em&gt;
+&lt;cite&gt;Citation&lt;/cite&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <p>Output:</p>
+                            <p><i>Italic text</i></p>
+                            <p><em>Emphasized text</em></p>
+                            <p><cite>Citation</cite></p>
+                        </div>
+                    </div>
+
+                    <h4>Bold Text</h4>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Code:</p>
+                            <pre><code>&lt;b&gt;Bold text&lt;/b&gt;
+&lt;strong&gt;Strong text&lt;/strong&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <p>Output:</p>
+                            <p><b>Bold text</b></p>
+                            <p><strong>Strong text</strong></p>
+                        </div>
+                    </div>
+
+                    <h4>Special Text Formatting</h4>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Code:</p>
+                            <pre><code>&lt;mark&gt;Highlighted text&lt;/mark&gt;
+&lt;del&gt;Deleted text&lt;/del&gt;
+&lt;sup&gt;Superscript&lt;/sup&gt;
+&lt;sub&gt;Subscript&lt;/sub&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <p>Output:</p>
+                            <p><mark>Highlighted text</mark></p>
+                            <p><del>Deleted text</del></p>
+                            <p>X<sup>2</sup> and H<sub>2</sub>O</p>
+                        </div>
+                    </div>
+
+                    <h4>Code and Keyboard</h4>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Code:</p>
+                            <pre><code>&lt;code&gt;console.log("Hello");&lt;/code&gt;
+&lt;kbd&gt;Ctrl + S&lt;/kbd&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <p>Output:</p>
+                            <p><code>console.log("Hello");</code></p>
+                            <p><kbd>Ctrl + S</kbd></p>
+                        </div>
+                    </div>
+
+                    <h3>3. HTML5 Semantic Elements</h3>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Code:</p>
+                            <pre><code>&lt;header&gt;Website Header&lt;/header&gt;
+&lt;nav&gt;Navigation Menu&lt;/nav&gt;
+&lt;main&gt;
+    &lt;article&gt;Main Content&lt;/article&gt;
+    &lt;aside&gt;Sidebar Content&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;Website Footer&lt;/footer&gt;</code></pre>
+                        </div>
+                        <div class="semantic-demo">
+                            <div class="demo-header">Website Header</div>
+                            <div class="demo-nav">Navigation Menu</div>
+                            <div class="demo-main">
+                                <div class="demo-article">Main Content</div>
+                                <div class="demo-aside">Sidebar Content</div>
+                            </div>
+                            <div class="demo-footer">Website Footer</div>
+                        </div>
+                    </div>
+
+                    <h3>4. HTML Entities</h3>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Code:</p>
+                            <pre><code>&amp;lt; displays &lt;
+&amp;gt; displays &gt;
+&amp;copy; displays ©
+&amp;reg; displays ®
+&amp;nbsp; adds space</code></pre>
+                        </div>
+                        <div class="output">
+                            <p>Output:</p>
+                            <p>&lt; Less than</p>
+                            <p>&gt; Greater than</p>
+                            <p>&copy; Copyright</p>
+                            <p>&reg; Registered</p>
+                            <p>Text&nbsp;&nbsp;&nbsp;with&nbsp;&nbsp;&nbsp;spaces</p>
+                        </div>
+                    </div>
+
+                    <h3>5. Meta Tags</h3>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Important Meta Tags:</p>
+                            <pre><code style="color: white">&lt;!-- Character Encoding --&gt;
+&lt;meta charset="UTF-8"&gt;
+
+&lt;!-- Viewport Settings --&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+&lt;!-- SEO Meta Tags --&gt;
+&lt;meta name="description" content="Page description"&gt;
+&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+&lt;meta name="author" content="Your Name"&gt;
+
+&lt;!-- Social Media Meta Tags --&gt;
+&lt;meta property="og:title" content="Your Title"&gt;
+&lt;meta property="og:description" content="Your Description"&gt;
+&lt;meta property="og:image" content="image.jpg"&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <h3>6. Document Structure Best Practices</h3>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Proper HTML5 Structure:</p>
+                            <pre><code style="color: white">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;Navigation&lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;section&gt;Content Section&lt;/section&gt;
+        &lt;/article&gt;
+        &lt;aside&gt;Sidebar&lt;/aside&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;Footer Content&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <h3>7. HTML Comments and Documentation</h3>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Comment Types and Best Practices:</p>
+                            <pre><code style="color: white">&lt;!-- Single line comment --&gt;
+
+&lt;!-- 
+    Multi-line comment
+    explaining complex
+    code structure 
+--&gt;
+
+&lt;!-- TODO: Add navigation menu --&gt;
+
+&lt;!-- FIXME: Resolve layout issue in mobile view --&gt;
+
+&lt;!-- 
+    @author: Your Name
+    @date: 2024-01-20
+    @description: Header component with responsive navigation 
+--&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <h3>8. Character Entities</h3>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Common HTML Entities:</p>
+                            <pre><code style="color: white">&lt;!-- Special Characters --&gt;
+&amp;copy; = ©
+&amp;reg; = ®
+&amp;trade; = ™
+&amp;euro; = €
+&amp;pound; = £
+&amp;cent; = ¢
+
+&lt;!-- Spacing --&gt;
+&amp;nbsp; = Non-breaking space
+&amp;ensp; = En space
+&amp;emsp; = Em space
+
+&lt;!-- Symbols --&gt;
+&amp;lt; = &lt;
+&amp;gt; = &gt;
+&amp;amp; = &amp;
+&amp;quot; = "
+&amp;apos; = '</code></pre>
+                        </div>
+                        <div class="output">
+                            <p>Output:</p>
+                            <p>&copy; Copyright Symbol</p>
+                            <p>&reg; Registered Trademark</p>
+                            <p>&trade; Trademark Symbol</p>
+                            <p>&euro; Euro Symbol</p>
+                            <p>&pound; Pound Symbol</p>
+                            <p>A&nbsp;&nbsp;&nbsp;B (with non-breaking spaces)</p>
+                        </div>
+                    </div>
+
+                    <h3>9. Display Italicized Text</h3>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Six different elements of displaying italicized text with distinct purpose:</p>
+                            <pre><code style="color: white">&lt;i&gt;The italics element is a physical element for displaying italicized text.&lt;/i&gt;
+
+&lt;em&gt;The emphasis element is a logical element for emphasizing important portions of a document.&lt;/em&gt;
+
+&lt;cite&gt;The citation element identifies a portion of your document as a reference to an outside source.&lt;/cite&gt;
+
+&lt;var&gt;The logical element indicates a variable, as might be used in computer code.&lt;/var&gt;
+
+&lt;dfn&gt;This logical element identifies a portion of text as defining instance of a term.&lt;/dfn&gt;
+
+&lt;address&gt;To set apart your address or personal information at the bottom of a Web page. This element also generally adds a line break before and after the address.&lt;/address&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <p><i>The italics element is a physical element for displaying italicized text.</i></p>
+                            <p><em>The emphasis element is a logical element for emphasizing important portions of a document.</em></p>
+                            <p><cite>The citation element identifies a portion of your document as a reference to an outside source.</cite></p>
+                            <p><var>The logical element indicates a variable, as might be used in computer code.</var></p>
+                            <p><dfn>This logical element identifies a portion of text as defining instance of a term.</dfn></p>
+                            <address>To set apart your address or personal information at the bottom of a Web page.</address>
+                        </div>
+                    </div>
+
+                    <h3>10. Display Boldface Text</h3>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Elements for bold text:</p>
+                            <pre><code style="color: white">&lt;b&gt;The bold element is a physical element that allows you to render boldface text.&lt;/b&gt;
+
+&lt;strong&gt;The strong also displays in bold. This logical element indicates a heavier or stronger emphasis than does &lt;b&gt;.&lt;/strong&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <p><b>The bold element is a physical element that allows you to render boldface text.</b></p>
+                            <p><strong>The strong also displays in bold. This logical element indicates a heavier or stronger emphasis.</strong></p>
+                        </div>
+                    </div>
+
+                    <h3>11. Display Highlighted and Deleted Text</h3>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Highlighting and deletion:</p>
+                            <pre><code style="color: white">&lt;mark&gt;Element defines marked/highlighted text&lt;/mark&gt;
+
+&lt;del&gt;Element defines deleted/removed text&lt;/del&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <p><mark>Element defines marked/highlighted text</mark></p>
+                            <p><del>Element defines deleted/removed text</del></p>
+                        </div>
+                    </div>
+
+                    <h3>12. Create Superscripts and Subscripts</h3>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Superscript and Subscript elements:</p>
+                            <pre><code style="color: white">&lt;sup&gt;This element creates a superscript&lt;/sup&gt;
+
+&lt;sub&gt;This element forces text to display as a subscript.&lt;/sub&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <p>Example: x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup></p>
+                            <p>Example: H<sub>2</sub>O</p>
+                        </div>
+                    </div>
+
+                    <h3>13. Display Monospaced Text</h3>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Monospaced text elements:</p>
+                            <pre><code style="color: white">&lt;code&gt;This logical element not only displays in a courier, fixed width-font font, but also indicates that the text is a portion of computer code.&lt;/code&gt;
+
+&lt;kbd&gt;Standing for keyboard, this logical element identifies its contents as keyboard input.&lt;/kbd&gt;
+
+&lt;samp&gt;This is another logical element. It describe its content as sample output, most often rendering text in monospaced font.&lt;/samp&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <p><code>This is computer code</code></p>
+                            <p><kbd>Press Ctrl + S to save</kbd></p>
+                            <p><samp>Program output goes here</samp></p>
+                        </div>
+                    </div>
+
+                    <h3>14. Display Underlined Text</h3>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Underline and inserted text:</p>
+                            <pre><code style="color: white">&lt;u&gt;The underline element will render text with a line underneath.&lt;/u&gt;
+
+&lt;ins&gt;The inserted text element is a logical element that indicates text that has been inserted since the document was written.&lt;/ins&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <p><u>The underline element will render text with a line underneath.</u></p>
+                            <p><ins>The inserted text element indicates text that has been inserted.</ins></p>
+                        </div>
+                    </div>
+
+                    <h3>15. Control Text Flow</h3>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Line breaks and paragraphs:</p>
+                            <pre><code style="color: white">/* Line Breaks */
+&lt;br&gt; tells a browser to insert a line break and go to the next line.
+
+/* Paragraphs */
+&lt;p&gt; element will add a blank line before it starts your new paragraph.
+
+/* Indentation */
+Use &amp;nbsp; to add spaces for indentation.
+It is most commonly used to create an indent at the beginning of a paragraph.</code></pre>
+                        </div>
+                        <div class="output">
+                            <p>First line<br>Second line</p>
+                            <p>First paragraph</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;Indented paragraph</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="lecture-navigation" style="display: flex; justify-content: center; gap: 20px; margin-top: 40px; margin-bottom: 20px;">
+                <a href="Lect1.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; border: 1px solid #666; transition: all 0.3s ease;">← Previous Lecture</a>
+                <a href="Lecture.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; border: 1px solid #666; transition: all 0.3s ease;">Back to Lectures</a>
+                <a href="Lect3.html" style="background-color: #ff4444; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: all 0.3s ease;">Next Lecture →</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+                sidebar.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html> 

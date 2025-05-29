@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Applications - Lecture 7</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3313/3313480.png">
+    <link rel="stylesheet" href="Lect7.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="sidebar">
+        <div class="logo">C</div>
+        <ul class="nav-links">
+            <li><a href="index.html" title="Home"><i class="fas fa-home"></i></a></li>
+            <li><a href="aboutme.html" title="About Me"><i class="fas fa-user"></i></a></li>
+            <li><a href="Lecture.html" title="Lectures"><i class="fas fa-chalkboard-teacher"></i></a></li>
+            <li><a href="prelims.html" title="Prelims"><i class="fas fa-book"></i></a></li>
+            <li><a href="midterms.html" title="Midterms"><i class="fas fa-book-open"></i></a></li>
+            <li><a href="finals.html" title="Finals"><i class="fas fa-graduation-cap"></i></a></li>
+        </ul>
+        <div class="social-links">
+            <a href="https://www.facebook.com/bszgdrine" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/bzsgdrine" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:estrada.catherine@ue.edu.ph" title="Email" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <div class="lecture-content">
+            <div class="intro">
+                <h2><span class="highlight">Bootstrap</span></h2>
+                <p class="subtitle">Practical Use of Bootstrap Layout, Grid, and Colors</p>
+            </div>
+
+            <section class="lecture-section">
+                <div class="lecture-container">
+                    <h3>1. Bootstrap Containers in Practice</h3>
+                    <p>Bootstrap containers are used to pad and align your content. There are two main types: <b>.container</b> (fixed width) and <b>.container-fluid</b> (full width).</p>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Fixed Container Example:</p>
+                            <pre><code>&lt;div class="container"&gt;
+    &lt;h1&gt;Fixed Container&lt;/h1&gt;
+    &lt;p&gt;This is a fixed-width container.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <div style="background:#fff; color:#222; border-radius:8px; padding:20px; max-width:540px; margin:auto;">
+                                <h1 style="font-size:1.5rem;">Fixed Container</h1>
+                                <p>This is a fixed-width container.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Fluid Container Example:</p>
+                            <pre><code>&lt;div class="container-fluid"&gt;
+    &lt;h1&gt;Fluid Container&lt;/h1&gt;
+    &lt;p&gt;This is a full-width container.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <div style="background:#fff; color:#222; border-radius:8px; padding:20px; width:100%;">
+                                <h1 style="font-size:1.5rem;">Fluid Container</h1>
+                                <p>This is a full-width container.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Container with Padding, Border, and Color:</p>
+                            <pre><code>&lt;div class="container p-3 my-3 border bg-primary text-white"&gt;
+    &lt;h1&gt;Styled Container&lt;/h1&gt;
+    &lt;p&gt;This container uses Bootstrap spacing, border, and color classes.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <div style="background:#0d6efd; color:#fff; border-radius:8px; padding:16px; border:1px solid #fff; margin:16px 0;">
+                                <h1 style="font-size:1.5rem;">Styled Container</h1>
+                                <p>This container uses Bootstrap spacing, border, and color classes.</p>
+                            </div>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="lecture-container">
+                    <h3>2. Bootstrap Grid System in Practice</h3>
+                    <p>The Bootstrap grid system uses rows and columns to layout and align content. It's built with flexbox and allows up to 12 columns across the page.</p>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Three Equal Columns:</p>
+                            <pre><code>&lt;div class="row"&gt;
+    &lt;div class="col"&gt;Column 1&lt;/div&gt;
+    &lt;div class="col"&gt;Column 2&lt;/div&gt;
+    &lt;div class="col"&gt;Column 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="output" style="background:transparent;">
+                            <div style="display:flex; gap:10px;">
+                                <div style="background:#fff; color:#222; border-radius:6px; flex:1; padding:16px; text-align:center;">Column 1</div>
+                                <div style="background:#fff; color:#222; border-radius:6px; flex:1; padding:16px; text-align:center;">Column 2</div>
+                                <div style="background:#fff; color:#222; border-radius:6px; flex:1; padding:16px; text-align:center;">Column 3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Two Unequal Responsive Columns:</p>
+                            <pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-sm-4"&gt;col-sm-4&lt;/div&gt;
+    &lt;div class="col-sm-8"&gt;col-sm-8&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="output" style="background:transparent;">
+                            <div style="display:flex; gap:10px;">
+                                <div style="background:#fff; color:#222; border-radius:6px; flex:0 0 33.33%; padding:16px; text-align:center;">col-sm-4</div>
+                                <div style="background:#fff; color:#222; border-radius:6px; flex:0 0 66.66%; padding:16px; text-align:center;">col-sm-8</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Responsive Four Columns (Stack on Mobile):</p>
+                            <pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-sm-3"&gt;col-sm-3&lt;/div&gt;
+    &lt;div class="col-sm-3"&gt;col-sm-3&lt;/div&gt;
+    &lt;div class="col-sm-3"&gt;col-sm-3&lt;/div&gt;
+    &lt;div class="col-sm-3"&gt;col-sm-3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="output" style="background:transparent;">
+                            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                <div style="background:#fff; color:#222; border-radius:6px; flex:1 1 25%; min-width:120px; padding:16px; text-align:center; margin-bottom:10px;">col-sm-3</div>
+                                <div style="background:#fff; color:#222; border-radius:6px; flex:1 1 25%; min-width:120px; padding:16px; text-align:center; margin-bottom:10px;">col-sm-3</div>
+                                <div style="background:#fff; color:#222; border-radius:6px; flex:1 1 25%; min-width:120px; padding:16px; text-align:center; margin-bottom:10px;">col-sm-3</div>
+                                <div style="background:#fff; color:#222; border-radius:6px; flex:1 1 25%; min-width:120px; padding:16px; text-align:center; margin-bottom:10px;">col-sm-3</div>
+                            </div>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="lecture-container">
+                    <h3>3. Bootstrap Colors in Practice</h3>
+                    <p>Bootstrap provides utility classes for text and background colors, including contextual and opacity classes.</p>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Text Color Utilities:</p>
+                            <pre><code>&lt;p class="text-primary"&gt;Primary text&lt;/p&gt;
+&lt;p class="text-success"&gt;Success text&lt;/p&gt;
+&lt;p class="text-danger"&gt;Danger text&lt;/p&gt;
+&lt;p class="text-muted"&gt;Muted text&lt;/p&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <p style="color:#0d6efd;">Primary text</p>
+                            <p style="color:#198754;">Success text</p>
+                            <p style="color:#dc3545;">Danger text</p>
+                            <p style="color:#6c757d;">Muted text</p>
+                        </div>
+                    </div>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Background Color Utilities:</p>
+                            <pre><code>&lt;div class="bg-warning text-dark p-2"&gt;Warning background&lt;/div&gt;
+&lt;div class="bg-info text-white p-2"&gt;Info background&lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <div style="background:#ffc107; color:#222; border-radius:6px; padding:10px; margin-bottom:8px;">Warning background</div>
+                            <div style="background:#0dcaf0; color:#fff; border-radius:6px; padding:10px;">Info background</div>
+                        </div>
+                    </div>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Contextual Link Colors:</p>
+                            <pre><code>&lt;a href="#" class="text-success"&gt;Success link&lt;/a&gt;
+&lt;a href="#" class="text-danger"&gt;Danger link&lt;/a&gt;
+&lt;a href="#" class="text-warning"&gt;Warning link&lt;/a&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <a href="#" style="color:#198754; text-decoration:underline; margin-right:10px;">Success link</a>
+                            <a href="#" style="color:#dc3545; text-decoration:underline; margin-right:10px;">Danger link</a>
+                            <a href="#" style="color:#ffc107; text-decoration:underline;">Warning link</a>
+                        </div>
+                    </div>
+            
+
+                
+                <div class="lecture-container">
+                    <h3>4. Bootstrap Borders and Text Utilities</h3>
+                    <p>Bootstrap provides utility classes for borders and text alignment, transformation, and weight.</p>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Border Utilities:</p>
+                            <pre><code>&lt;div class="border p-3 mb-2"&gt;Default border&lt;/div&gt;
+&lt;div class="border border-primary p-3 mb-2"&gt;Primary border&lt;/div&gt;
+&lt;div class="border border-success p-3 mb-2"&gt;Success border&lt;/div&gt;
+&lt;div class="border border-danger p-3 mb-2"&gt;Danger border&lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <div style="border:1px solid #dee2e6; border-radius:6px; padding:12px; margin-bottom:8px; background:#fff; color:#222;">Default border</div>
+                            <div style="border:1px solid #0d6efd; border-radius:6px; padding:12px; margin-bottom:8px; background:#fff; color:#222;">Primary border</div>
+                            <div style="border:1px solid #198754; border-radius:6px; padding:12px; margin-bottom:8px; background:#fff; color:#222;">Success border</div>
+                            <div style="border:1px solid #dc3545; border-radius:6px; padding:12px; margin-bottom:8px; background:#fff; color:#222;">Danger border</div>
+                        </div>
+                    </div>
+                    <div class="example-box">
+                        <div class="code">
+                            <p>Text Utilities:</p>
+                            <pre><code>&lt;p class="text-center"&gt;Centered text&lt;/p&gt;
+&lt;p class="text-uppercase"&gt;Uppercase text&lt;/p&gt;
+&lt;p class="fw-bold"&gt;Bold text&lt;/p&gt;
+&lt;p class="fst-italic"&gt;Italic text&lt;/p&gt;</code></pre>
+                        </div>
+                        <div class="output">
+                            <p style="text-align:center; color:#fff; background:#333; border-radius:6px; padding:8px;">Centered text</p>
+                            <p style="text-transform:uppercase; color:#fff; background:#333; border-radius:6px; padding:8px;">Uppercase text</p>
+                            <p style="font-weight:bold; color:#fff; background:#333; border-radius:6px; padding:8px;">Bold text</p>
+                            <p style="font-style:italic; color:#fff; background:#333; border-radius:6px; padding:8px;">Italic text</p>
+                        </div>
+                    </div>
+                
+                </div>
+            </section>
+            <div class="lecture-navigation" style="display: flex; justify-content: center; gap: 20px; margin-top: 40px; margin-bottom: 20px;">
+                <a href="Lect6.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; border: 1px solid #666; transition: all 0.3s ease;">← Previous Lecture</a>
+                <a href="Lecture.html" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; border: 1px solid #666; transition: all 0.3s ease;">Back to Lectures</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+    </script>
+</body>
+</html> 

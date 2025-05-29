@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prelims - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3313/3313480.png">
+    <link rel="stylesheet" href="prelims.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="sidebar">
+        <div class="logo">C</div>
+        <ul class="nav-links">
+            <li><a href="index.html" title="Home"><i class="fas fa-home"></i></a></li>
+            <li><a href="aboutme.html" title="About Me"><i class="fas fa-user"></i></a></li>
+            <li><a href="Lecture.html" title="Lectures"><i class="fas fa-chalkboard-teacher"></i></a></li>
+            <li><a href="prelims.html" title="Prelims"><i class="fas fa-book"></i></a></li>
+            <li><a href="midterms.html" title="Midterms"><i class="fas fa-book-open"></i></a></li>
+            <li><a href="finals.html" title="Finals"><i class="fas fa-graduation-cap"></i></a></li>
+        </ul>
+        <div class="social-links">
+            <a href="https://www.facebook.com/bszgdrine" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/bzsgdrine" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href= "mailto:estrada.catherine@ue.edu.ph" title="Email" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <div class="prelims-section">
+            <div class="intro">
+                <h2>Prelims <span class="highlight">Content</span></h2>
+                <p class="subtitle">Lectures and Activities</p>
+            </div>
+            <section class="activities-section">
+                <h2>Activities</h2>
+                <div class="section-wrapper">
+                    <button class="scroll-btn prev" data-direction="prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="scroll-btn next" data-direction="next"><i class="fas fa-chevron-right"></i></button>
+                    <div class="blog-grid" id="activities-grid">
+                        <div class="card activity-card">
+                            <div class="card-content">
+                                <h3>Prelim Activity 2</h3>
+                                <p>Table-Image Gallery</p>
+                                <a href="ImageGallery.html" class="read-more" target="_blank">View Activity <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="card activity-card">
+                            <div class="card-content">
+                                <h3>Prelim Activity 3</h3>
+                                <p>Tags - Web Developer's Page</p>
+                                <a href="Developers_Page (1).html" class="read-more" target="_blank">View Activity <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="card activity-card">
+                            <div class="card-content">
+                                <h3>Prelim Quiz 1</h3>
+                                <p>Table with Images</p>
+                                <a href="PrelimHandsOnQuiz1.html" class="read-more" target="_blank">View Quiz <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="card activity-card">
+                            <div class="card-content">
+                                <h3>Prelim Exam</h3>
+                                <p>Furniture Sale</p>
+                                <a href="PRELIMEXAM\index.html" class="read-more" target="_blank">View Exam <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+                sidebar.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+
+        document.querySelectorAll('.section-wrapper').forEach(wrapper => {
+            const grid = wrapper.querySelector('.blog-grid');
+            const prevBtn = wrapper.querySelector('.scroll-btn.prev');
+            const nextBtn = wrapper.querySelector('.scroll-btn.next');
+            const scrollAmount = 330;
+
+            prevBtn.addEventListener('click', () => {
+                grid.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                grid.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+
+                        grid.addEventListener('scroll', () => {                prevBtn.style.opacity = grid.scrollLeft > 0 ? '1' : '0.5';                nextBtn.style.opacity = grid.scrollLeft < (grid.scrollWidth - grid.clientWidth) ? '1' : '0.5';            });            prevBtn.style.opacity = '0.5';
+        });
+    </script>
+</body>
+</html>

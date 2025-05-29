@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Data Sheet</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            max-height: 95vh;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .title {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .title h1,
+        .title h2,
+        .title small {
+            margin: 0;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .row label {
+            flex: 1;
+            font-weight: bold;
+        }
+
+        .input,
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            border: none;
+            border-bottom: 1px solid #000;
+            width: 100%;
+            padding: 2px 4px;
+        }
+
+        .section-title {
+            margin-top: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .sub-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .form-group {
+            flex: 1 1 45%;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .checkbox-group,
+        .radio-group {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-group label,
+        .radio-group label {
+            display: block;
+            font-weight: normal;
+        }
+
+        .flex-between {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .half {
+            width: 48%;
+        }
+
+        .container {
+            box-shadow: none;
+            margin: auto;
+            height: auto;
+            max-height: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">LOGO</div>
+            <div class="title">
+                <h1>SAMPLE UNIVERSITY</h1>
+                <div>ENROLLMENT SYSTEM</div>
+                <h2>PERSONAL DATA SHEET</h2>
+                <small>(Graduate School, Law, Medicine)</small>
+            </div>
+        </div>
+
+        <div class="row">
+            <label>Program:</label>
+            <input type="text" class="input" style="width: 300px;">
+            <label style="margin-left: 40px;">Student #:</label>
+            <input type="text" class="input" style="width: 200px;">
+        </div>
+
+        <div class="row">
+            <label>SURNAME:</label>
+            <label>GIVEN NAME:</label>
+            <label>MIDDLE NAME:</label>
+            <label>AUXILIARY NAME (Sr., Jr., I, II, III, etc):</label>
+        </div>
+        <div class="row">
+            <input type="text" class="input">
+        </div>
+
+        <div class="section-title">STUDENT DETAILS:</div>
+        <div class="row">
+            <label>E-mail address:</label>
+            <input type="email" class="input" style="flex: 2;">
+          </div>
+        
+          <div class="row">
+            <label>Home Address:</label>
+            <input type="text" class="input" style="flex: 4;">
+          </div>
+        
+          <div class="row">
+            <label>Zip Code:</label>
+            <input type="text" class="input">
+            <label>Region:</label>
+            <input type="text" class="input">
+          </div>
+        
+          <div class="row">
+            <label>Birthday:</label>
+            <input type="date" class="input">
+            <label>Age:</label>
+            <input type="number" class="input">
+          </div>
+        
+          <div class="row">
+            <label>Birthplace:</label>
+            <input type="text" class="input">
+            <label>Religion:</label>
+            <input type="text" class="input">
+          </div>
+        
+          <div class="row">
+            <label>Citizenship:</label>
+            <input type="text" class="input">
+            <label>Sex:</label>
+            <select class="input">
+              <option value="">Select</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+        
+          <div class="row">
+            <label>If Alien, ACR # (see Registrar):</label>
+            <input type="text" class="input" style="flex: 2;">
+          </div>
+        
+          <div class="checkbox-group">
+            <label><strong>Legal Status:</strong></label>
+            <label><input type="checkbox"> Citizen of RP</label>
+            <label><input type="checkbox"> Permanent Resident</label>
+            <label><input type="checkbox"> Person granted permission to enter and remain as a student in RP on a visa for a defined period of time</label>
+            <label><input type="checkbox"> Person granted permission to enter and remain as a child or spouse of a worker on a visa for a defined period of time</label>
+            <label><input type="checkbox"> Other visa</label>
+            <label><input type="checkbox"> Legal status not known</label>
+          </div>
+        
+          <div class="radio-group flex-between">
+            <div class="half">
+              <label><strong>Civil Status:</strong></label>
+              <label><input type="radio" name="civil"> Single</label>
+              <label><input type="radio" name="civil"> Married</label>
+              <label><input type="radio" name="civil"> Divorced</label>
+              <label><input type="radio" name="civil"> Widowed</label>
+              <label><input type="radio" name="civil"> Separated</label>
+            </div>
+            <div class="half">
+              <label><strong>Working:</strong></label>
+              <label><input type="radio" name="working"> Working</label>
+              <label><input type="radio" name="working"> Not Working</label>
+              <label>If working: Office/Bus. Tel. # <input type="text" class="input" style="width: 150px;"></label>
+            </div>
+          </div>
+        
+          <div class="section-title">FATHER'S INFORMATION:</div>
+          <div class="sub-section">
+            <div class="form-group"><label>Surname:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>First Name:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Middle Name:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Auxiliary Name:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Occupation/Employment:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Educational Attainment:</label><input type="text" class="input"></div>
+            <div class="form-group" style="flex: 1 1 100%;"><label>Parent's Address:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Zip Code:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Parent's Tel. #:</label><input type="text" class="input"></div>
+          </div>
+        
+          <div class="section-title">MOTHER'S INFORMATION:</div>
+          <div class="sub-section">
+            <div class="form-</div>group"><label>Surname:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>First Name:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Middle Name:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Auxiliary Name:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Occupation/Employment:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Educational Attainment:</label><input type="text" class="input"></div>
+            <div class="form-group" style="flex: 1 1 100%;"><label>Parent's Address:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Zip Code:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Parent's Tel. #:</label><input type="text" class="input"></div>
+          </div>
+        
+          <div class="section-title">GUARDIAN'S INFORMATION: <small>(If Applicable)</small></div>
+          <div class="sub-section">
+            <div class="form-group"><label>Surname:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>First Name:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Middle Name:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Auxiliary Name:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Occupation/Employment:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Off./Bus. Tel. #:</label><input type="text" class="input"></div>
+            <div class="form-group" style="flex: 1 1 100%;"><label>Guardian's Address:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Zip Code:</label><input type="text" class="input"></div>
+            <div class="form-group"><label>Tel. #:</label><input type="text" class="input"></div>
+          </div>
+        
+       
+      </div>
+
+ 
+</body>
+</html>

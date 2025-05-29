@@ -1,0 +1,65 @@
+body {
+    font-family: 'Patrick Hand', cursive;
+    background-image: url(https://t4.ftcdn.net/jpg/07/58/77/57/360_F_758775723_bOr6pyoAoJ0RITe9zWK3ICcZrJ3m99Sn.jpg);
+    background-size:cover;
+    color: darkblue;
+    background-repeat: no-repeat;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+}
+th, td {
+    border: 2px solid black;
+    padding: 5px;
+}
+.content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 10px;
+    align-items: center; 
+
+}
+
+.right-content {
+
+    width: 45%;
+    color:red;
+    text-align: justify;
+}
+
+.left-content {
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+img {
+
+    width: 100%;
+    border: 1px solid black;
+
+}
+
+.container {
+
+    width: 80%;
+    margin:100px;
+    background-color: whitesmoke;
+    padding: 10px;
+    border: 1px solid black;
+
+}
+h1, h5 {
+    line-height: 3.0%;
+}
+.psize {
+    font-size: 12px;
+}
